@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: black(247, 0, 255);
+}
+.card {
+  background-color: rgb(240, 178, 255);
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.header img {
+  height: 40px;
+  width: 40px;
+}
+
+.todo-input {
+  border: 1px solid black;
+  width: 70%;
+  height: 2.5rem;
+  border-radius: 2rem;
+  padding: 5px;
+  margin-left: 0.5rem;
+}
+
+input::placeholder {
+  color: #dd5746;
+}
+
+.btn {
+  border: 1px solid black;
+  height: 2rem;
+  border-radius: 2rem;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.4s;
+  margin-left: 1.5rem;
+}
+
+.btn:hover {
+  background-color: #ffc470;
+}
+
+ul {
+  list-style: none;
+  margin: 5px;
+}
+
+li {
+  margin-top: 10px;
+  border: solid 1px black;
+  width: 90%;
+  border-radius: 30px;
+  padding: 10px 50px;
+  font-size: 18px;
+  font-weight: 700;
+  position: relative;
+  user-select: none;
+}
+
+ul li::before {
+  content: "";
+  background: url(./imgs/undone.png);
+  background-size: cover;
+  position: center;
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.checked {
+  background-color: #88322c;
+  color: white;
+}
+
+.checked::before {
+  background: url(./imgs/done.png);
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+}
+
+span {
+  position: absolute;
+  right: 5px;
+  top: 6px;
+  font-size: 25px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+ul li.checked span:hover {
+  background-color: black;
+  color: #ffc470;
+}
